@@ -144,7 +144,7 @@ export default function Home() {
               <label className="mt-5">Você já tem fotos reais?<select value={form.photos} onChange={(e) => updateField("photos", e.target.value)}><option>Sim, vou enviar</option><option>Ainda não tenho</option><option>Quero usar ilustrações</option></select></label>
               <label className="mt-5">Algo importante para a Legiva saber?<textarea value={form.notes} onChange={(e) => updateField("notes", e.target.value)} placeholder="Slogan, cores, algo que não pode aparecer..." rows={2} /></label>
               <button className="button button-accent mt-7 w-full justify-center" type="submit">Enviar briefing pelo WhatsApp <ExternalLink size={16} /></button>
-              {submitted && <div className="success-box mt-5"><Check size={18} /><span>Recebido em breve e retornaremos</span></div>}
+              {submitted && <div className="success-box mt-5"><Check size={18} /><span>Recebemos sua solicitação. Em breve, entraremos em contato.</span></div>}
             </form>
           </div>
         </section>
