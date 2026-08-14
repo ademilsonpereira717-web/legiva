@@ -1,0 +1,58 @@
+/* Legiva Presença Essencial: estética editorial clara, creme/petróleo/musgo, com foco em confiança e começo possível. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root { --radius: 0.65rem; --background: oklch(0.96 0.015 85); --foreground: oklch(0.20 0.02 135); --primary: oklch(0.38 0.07 145); --primary-foreground: oklch(0.98 0.01 85); --border: oklch(0.20 0.02 135 / 14%); --ring: oklch(0.58 0.12 80); }
+
+@theme inline { --font-sans: 'DM Sans', sans-serif; --font-display: 'Space Grotesk', sans-serif; --color-background: var(--background); --color-foreground: var(--foreground); --color-border: var(--border); --color-ring: var(--ring); --radius-sm: calc(var(--radius) - 4px); --radius-md: calc(var(--radius) - 2px); --radius-lg: var(--radius); }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: 'DM Sans', sans-serif; background: #f5f1e8; }
+button, a, input, textarea, select { transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms cubic-bezier(.23,1,.32,1), box-shadow 180ms ease; }
+a { text-decoration: none; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #e7b94f; outline-offset: 3px; }
+.skip-link { position: fixed; left: 1rem; top: -4rem; z-index: 100; background: #e7b94f; color: #20231f; padding: .7rem 1rem; font-weight: 700; }
+.skip-link:focus { top: 1rem; }
+.nav-link { font-size: .85rem; font-weight: 600; color: rgba(32,35,31,.65); }
+.nav-link:hover { color: #49624a; }
+.brand-image { width: 2rem; height: 2rem; object-fit: contain; } .brand-mark { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border: 2px solid #49624a; border-radius: .55rem .55rem .55rem .15rem; transform: rotate(-8deg); }
+.brand-mark span { display: block; width: .9rem; height: 1rem; border-left: 2px solid #49624a; border-top: 2px solid #49624a; transform: translate(.08rem,.04rem) rotate(45deg); }
+.brand-mark.small { width: 1.4rem; height: 1.4rem; border-width: 1.5px; border-radius: .4rem .4rem .4rem .1rem; }
+.brand-mark.small span { width: .6rem; height: .65rem; border-width: 1.5px; }
+.button { display: inline-flex; align-items: center; gap: .6rem; border-radius: 999px; padding: .82rem 1.2rem; font-size: .86rem; font-weight: 700; }
+.button:active { transform: scale(.97); }
+.button-dark { background: #20231f; color: #f5f1e8; }
+.button-dark:hover { background: #49624a; }
+.button-accent { background: #e7b94f; color: #20231f; box-shadow: 0 7px 0 rgba(32,35,31,.14); }
+.button-accent:hover { background: #f0ca68; transform: translateY(-2px); box-shadow: 0 9px 0 rgba(32,35,31,.14); }
+.button-quiet { color: rgba(32,35,31,.65); border: 1px solid rgba(32,35,31,.14); }
+.button-quiet:hover { border-color: #49624a; color: #49624a; }
+.eyebrow { display: flex; align-items: center; gap: .55rem; font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #49624a; }
+.eyebrow.light { color: #e7b94f; }
+.eyebrow-dot { width: .45rem; height: .45rem; border-radius: 50%; background: #49624a; }
+.eyebrow-dot.yellow { background: #e7b94f; }
+h1, h2, h3, .logo-wordmark { font-family: 'Space Grotesk', sans-serif; } .logo-wordmark { font-size: 1.08rem; font-weight: 700; letter-spacing: -.08em; } .logo-wordmark .logo-a { color: #49624a; border-bottom: 2px solid #e7b94f; } .footer-wordmark { font-size: .95rem; }
+h1 em { color: #49624a; font-style: normal; }
+.section-title { max-width: 650px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.35rem, 5vw, 4.4rem); font-weight: 700; line-height: .98; letter-spacing: -.07em; } .section-title-quiet { font-size: clamp(2rem, 4vw, 3.45rem); line-height: 1.02; }
+.hero-texture { background-image: radial-gradient(#49624a 0.7px, transparent 0.7px); background-size: 15px 15px; }
+.hero-card { position: relative; border: 1px solid rgba(32,35,31,.12); background: rgba(255,252,245,.78); padding: 1.5rem; box-shadow: 14px 14px 0 rgba(73,98,74,.16); backdrop-filter: blur(10px); }
+.hero-art { background-image: linear-gradient(90deg, rgba(255,252,245,.96) 0%, rgba(255,252,245,.82) 64%, rgba(255,252,245,.55) 100%), url('/assets/legiva-hero-paper.jpg'); background-size: cover; background-position: center; } .hero-card::before { content: ''; position: absolute; top: -1rem; right: 1.5rem; width: 3.4rem; height: 1.2rem; background: #e7b94f; transform: rotate(4deg); opacity: .9; }
+.stamp { border: 1px solid #49624a; border-radius: 999px; padding: .35rem .55rem; color: #49624a; font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; } .heart-price { position: relative; display: grid; place-items: center; width: 4.2rem; height: 4.2rem; color: #e7b94f; filter: drop-shadow(3px 4px 0 rgba(32,35,31,.16)); transform: rotate(-6deg); } .heart-price svg:last-child { position: absolute; color: #20231f; transform: translateY(.08rem); }
+.step-row { display: flex; align-items: flex-start; gap: 1.2rem; padding: 1.65rem 0; }
+.step-number { font-family: 'Space Grotesk', sans-serif; font-size: .8rem; font-weight: 700; color: #49624a; }
+.offer-item { display: flex; align-items: center; gap: .8rem; border: 1px solid rgba(245,241,232,.16); padding: 1.2rem; color: rgba(245,241,232,.78); font-size: .92rem; }
+.image-panel { min-height: 360px; background-size: cover; background-position: center; } .image-stack { position: relative; min-height: 420px; } .image-stack .image-panel { position: absolute; width: 78%; } .image-stack .process-image { left: 0; top: 0; z-index: 2; } .image-stack .presence-image { right: 0; bottom: 0; z-index: 1; min-height: 220px; border: 10px solid #ebe5d8; } .presence-image { background-image: url('/assets/legiva-presence-window.jpg'); } .presence-stamp { position: absolute; right: -1rem; top: 1.5rem; z-index: 4; border: 1px solid #49624a; background: #f5f1e8; padding: .55rem .7rem; color: #49624a; font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; transform: rotate(4deg); }
+.process-image { background-image: linear-gradient(90deg, rgba(245,241,232,.08), transparent), url('/assets/legiva-process-desk.jpg'); }
+.form-paper { border: 1px solid rgba(32,35,31,.12); background: #f8f4eb; padding: 1.25rem; box-shadow: 10px 10px 0 rgba(73,98,74,.14); }
+.form-paper label { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: rgba(32,35,31,.67); }
+.form-paper input, .form-paper textarea, .form-paper select { display: block; width: 100%; margin-top: .55rem; border: 1px solid rgba(32,35,31,.17); border-radius: .15rem; background: #fffdf7; padding: .8rem .85rem; color: #20231f; font: 500 .92rem 'DM Sans', sans-serif; }
+.form-paper input::placeholder, .form-paper textarea::placeholder { color: rgba(32,35,31,.32); }
+.form-paper input:focus, .form-paper textarea:focus, .form-paper select:focus { border-color: #49624a; outline: 0; box-shadow: 0 0 0 3px rgba(73,98,74,.12); }
+.success-box { display: flex; align-items: flex-start; gap: .7rem; border: 1px solid rgba(73,98,74,.3); background: rgba(73,98,74,.08); padding: .9rem; color: #49624a; font-size: .82rem; line-height: 1.4; }
+.simulation-box { border: 1px solid rgba(32,35,31,.13); background: #fffdf7; padding: 1.25rem; }
+@media (min-width: 640px) { .form-paper, .simulation-box { padding: 2rem; } }
+@media (prefers-reduced-motion: no-preference) { .hero-card { animation: rise .65s cubic-bezier(.23,1,.32,1) both; } @keyframes rise { from { opacity: 0; transform: translateY(18px) rotate(1deg); } to { opacity: 1; transform: translateY(0) rotate(0); } } }
