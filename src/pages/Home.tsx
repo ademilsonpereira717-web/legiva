@@ -104,7 +104,21 @@ export default function Home() {
             <div className="relative lg:pl-12">
               <div className="hero-card hero-art">
                 <div className="flex items-start justify-between border-b border-[#20231f]/10 pb-5"><div><p className="text-xs font-bold uppercase tracking-[0.16em] text-[#49624a]">Oferta inicial da Legiva</p><p className="mt-2 text-2xl font-bold tracking-[-0.05em]">Seu site começa aqui.</p></div><span className="stamp">sem complicação</span></div>
-                <div className="my-10 flex items-center gap-5"><div className="heart-price"><Heart size={58} strokeWidth={1.5} fill="currentColor" className="text-[#e7b94f]"/></div>
+                <div className="my-10 flex items-center gap-5"><div className="heart-price">
+  <Heart
+    size={58}
+    strokeWidth={1.5}
+    fill="currentColor"
+    className="text-[#e7b94f]"
+  />
+  <DollarSign
+    size={27}
+    strokeWidth={2.5}
+    className="opacity-0"
+    aria-hidden="true"
+  />
+</div>
+
                   <div><p className="text-3xl font-bold tracking-[-0.07em]">site pronto</p><p className="mt-2 text-sm leading-6 text-[#20231f]/55">domínio + hospedagem<br />para sua presença online</p></div></div>
                 <div className="flex items-center gap-3 border-t border-[#20231f]/10 pt-5 text-sm font-semibold"><span className="brand-mark small"><span /></span> legiva.shop <span className="ml-auto text-[#49624a]">↗</span></div>
               </div>
